@@ -1,0 +1,9 @@
+- hosts: all
+  vars_files:
+    - vars/vars.yml
+  become: yes
+  become_user: root
+  roles:
+    - ansible-base
+    - ansible-web
+    - ansible-wireguard

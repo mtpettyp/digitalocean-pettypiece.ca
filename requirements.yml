@@ -1,0 +1,8 @@
+- src: git+https://github.com/mtpettyp/ansible-base.git
+  version: main
+
+- src: git+https://github.com/mtpettyp/ansible-web.git
+  version: main
+
+- src: git+https://github.com/mtpettyp/ansible-wireguard.git
+  version: main
