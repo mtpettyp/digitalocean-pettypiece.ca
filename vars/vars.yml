@@ -25,7 +25,12 @@ sites:
     domains:
       - www.pettypiece.ca
       - pettypiece.ca
-    files: www.pettypiece.ca/
+    files: sites/www.pettypiece.ca/
+    type: static
+  - name: uptime.pettypiece.ca
+    domains:
+      - uptime.pettypiece.ca
+    files: sites/uptime.pettypiece.ca/
     type: static
   - name: wireguard.pettypiece.ca
     domains:

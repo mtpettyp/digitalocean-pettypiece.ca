@@ -33,3 +33,11 @@ resource "digitalocean_record" "wireguard_pettypiece_ca" {
   value  = digitalocean_droplet.pettypiece_ca.ipv4_address
   ttl    = 60
 }
+
+resource "digitalocean_record" "uptime_pettypiece_ca" {
+  domain = data.digitalocean_domain.pettypiece_ca.name
+  type   = "A"
+  name   = "uptime"
+  value  = digitalocean_droplet.pettypiece_ca.ipv4_address
+  ttl    = 60
+}
