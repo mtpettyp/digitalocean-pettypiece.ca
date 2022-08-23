@@ -26,10 +26,18 @@ sites:
       - www.pettypiece.ca
       - pettypiece.ca
     files: www.pettypiece.ca/
-peers:
-  - name: mbp-2013
-    public_key: 8JWUCu8QH8dkcRCzNWdtiOjRgQjUDaCwpTU1Jh8KyFU=
-    allowed_ips: 10.0.0.2/24
-  - name: iPhone-11
-    public_key: 6tC4dCqg9PS+xPRL5uyv6iXzUSSobU36uNQmhbmk9x0=
-    allowed_ips: 10.0.0.3/24
+    type: static
+  - name: wireguard.pettypiece.ca
+    domains:
+      - wireguard.pettypiece.ca
+    type: proxy
+    proxied_server: http://127.0.0.1:5000/
+wireguard_ui:
+  password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          33643030623531633431333131643338636462383135336433313963326333343537653638333931
+          3930373638636664383765326666393734353661346665370a666235353065633534363439393137
+          66356635623537353034393731626161353065323032376334366335313738623336643962363365
+          6436323131343337630a366237336262373730363563383866366630353537613465343731633461
+          30613661376463393565643232356434646432356535616239363163663038616334
+

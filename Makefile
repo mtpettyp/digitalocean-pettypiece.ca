@@ -16,4 +16,4 @@ update-web: init
 	ansible-playbook -K -i $(INVENTORY) --tags nginx,letsencrypt main.yml
 
 update-vpn: init
-	ansible-playbook -K -i $(INVENTORY) --tags wireguard main.yml
+	ansible-playbook -K -i $(INVENTORY) --tags wireguard,wireguard-ui main.yml
